@@ -2,9 +2,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { X, Mail,Phone } from "lucide-react";
+import { X, Mail, Phone } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // detects current route
+  const router = useRouter();
+  const handleScrollToSection = (id) => {
+    if (pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push(`/?scrollTo=${id}`);
+    }
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full z-10 flex items-center justify-center bg-[#0b2341]">
@@ -14,7 +27,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <div className="relative w-[50px] h-[50px] md:w-[70px] md:h-[70px]">
               <Image
-                src="/images/roasterlogo.jpg"
+                src="/images/logo.png"
                 alt="logo"
                 fill
                 className="object-contain"
@@ -34,9 +47,14 @@ export default function Navbar() {
           <Link href="/" className="cursor-pointer hover:text-gray-400">
             Home
           </Link>
-          <Link href="/about" className="cursor-pointer hover:text-gray-400">
+          <button
+            onClick={() => {
+              handleScrollToSection("about");
+            }}
+            className="cursor-pointer hover:text-gray-400"
+          >
             About
-          </Link>
+          </button>
           <Link href="/services" className="cursor-pointer hover:text-gray-400">
             Services
           </Link>
@@ -57,7 +75,7 @@ export default function Navbar() {
           </a>
           <a href="tel:+6591364098">
             <button className="bg-gray-100  rounded-full p-1 md:p-2">
-              <Phone  className="text-orange-400 w-4 h-4 md:w-5 md:h-5" />
+              <Phone className="text-orange-400 w-4 h-4 md:w-5 md:h-5" />
             </button>
           </a>
 
@@ -88,9 +106,14 @@ export default function Navbar() {
             <Link href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)}>
+            <button
+              onClick={() => {
+                handleScrollToSection("about");
+                setIsOpen(false);
+              }}
+            >
               About
-            </Link>
+            </button>
             <Link href="/services" onClick={() => setIsOpen(false)}>
               Services
             </Link>
