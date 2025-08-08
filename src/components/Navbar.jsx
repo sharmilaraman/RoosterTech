@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 w-full z-10 flex items-center justify-center bg-[#0b2341]">
-      <div className="container mx-auto flex items-center justify-between py-2 px-6 md:px-10 lg:px-32">
+      <div className="container mx-auto flex items-center justify-between py-2 px-6 md:px-10 lg:px-20">
         {/* Logo + Brand Name */}
         <Link href="/">
           <div className="flex items-center gap-3">

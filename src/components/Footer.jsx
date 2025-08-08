@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-[#0b2341] w-full text-white pt-10 px-6 md:px-10 lg:px-32 overflow-hidden" id="footer">
+    <div className="bg-[#0b2341] w-full text-white pt-10 px-6 md:px-10 lg:px-20 overflow-hidden" id="footer">
      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start ">
                  <div className="w-full md:w-1/3 mb-8 md:mb-0">
                       <Image src="/images/logo.png" alt="logo" width={70} height={70} />
