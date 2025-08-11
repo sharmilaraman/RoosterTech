@@ -3,6 +3,7 @@ import About from "./about/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
 import { ToastContainer } from 'react-toastify';
+import Services from "./services/page";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <ToastContainer />
       <Header />
       <About />
+      <Services />
       <Projects />
       <Contact />
     </div>     

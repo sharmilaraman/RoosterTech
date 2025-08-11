@@ -21,7 +21,7 @@ export default function Contact() {
 
     if (data.success) {
       setResult("");
-      toast.success("Form Submitted Successfully 🎉");
+      toast.success("Form Submitted Successfully!");
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -83,7 +83,7 @@ export default function Contact() {
           <div className="text-center">
             <button 
               type="submit" 
-              className="bg-[#0b2341]  text-white font-semibold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-md"
+              className="bg-[#0b2341] cursor-pointer text-white font-semibold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-md"
             >
               {result ? result : "Send Message"}
             </button>

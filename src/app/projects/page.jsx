@@ -24,11 +24,11 @@ export default function Projects() {
       </p>
 
       {/* Grid of client cards */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {companyClients.map((company, index) => (
           <div
             key={index}
-            className="border border-orange-400 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-shadow bg-white hover:scale-105 transform duration-300 ease-in-out"
+            className="border border-orange-400 cursor-pointer rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-shadow bg-white hover:scale-105 transform duration-300 ease-in-out"
           >
             <div className="flex justify-center mb-4">
               <Building2 className="h-10 w-10 text-orange-400" />

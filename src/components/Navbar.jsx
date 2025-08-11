@@ -75,12 +75,12 @@ export default function Navbar() {
         {/* CTA + Mobile Menu Button */}
         <div className="flex items-center gap-3">
           <a href="mailto:roostertechsa@gmail.com">
-            <button className="bg-gray-100  rounded-full p-1 md:p-2">
+            <button className="bg-gray-100 cursor-poiner rounded-full p-1 md:p-2">
               <Mail className="text-orange-400 w-4 h-4 md:w-5 md:h-5" />
             </button>
           </a>
           <a href="tel:+6591364098">
-            <button className="bg-gray-100  rounded-full p-1 md:p-2">
+            <button className="bg-gray-100 cursor-pointer rounded-full p-1 md:p-2">
               <Phone className="text-orange-400 w-4 h-4 md:w-5 md:h-5" />
             </button>
           </a>
