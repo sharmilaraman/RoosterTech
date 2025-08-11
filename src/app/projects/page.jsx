@@ -16,9 +16,9 @@ export default function Projects() {
 
   return (
     <div className='container mb-4 mx-auto py-4 pt-10 px-6 md:px-10 lg:px-20 w-full overflow-hidden' id='projects'>
-      <h1 className='text-orange-400 text-2xl sm:text-4xl mb-2 font-semibold text-center'>
-        Our Project Clients
-      </h1>
+     <h1 className='text-2xl sm:text-4xl font-bold mb-2 text-center'>Our<span className='underline underline-offset-4 
+      decoration-1  
+      text-orange-400 under font-light'>  Project Clients</span></h1>
       <p className='text-center text-xl text-[#0b2341] max-w-100 mx-auto mb-8'>
         We have Successfully Completed the Projects and Maintenance Work for the following companies:
       </p>

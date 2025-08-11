@@ -6,7 +6,7 @@ import { X, Mail, Phone } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // detects current route
+  const pathname = usePathname(); 
   const router = useRouter();
   const handleScrollToSection = (id) => {
     if (pathname === "/") {
@@ -58,12 +58,18 @@ export default function Navbar() {
           <Link href="/services" className="cursor-pointer hover:text-gray-400">
             Services
           </Link>
-          <Link href="/projects" className="cursor-pointer hover:text-gray-400">
+          <button className="cursor-pointer hover:text-gray-400"
+           onClick={() => {
+              handleScrollToSection("projects");
+            }} >
             Projects
-          </Link>
-          <Link href="/contact" className="cursor-pointer hover:text-gray-400">
+          </button>
+          <button className="cursor-pointer hover:text-gray-400"
+            onClick={() => {
+              handleScrollToSection("contact");
+            }}>
             Contact
-          </Link>
+          </button>
         </ul>
 
         {/* CTA + Mobile Menu Button */}
@@ -114,15 +120,18 @@ export default function Navbar() {
             >
               About
             </button>
-            <Link href="/services" onClick={() => setIsOpen(false)}>
+            <button  onClick={() => {
+                handleScrollToSection("servicess");
+                setIsOpen(false);
+              }}>
               Services
-            </Link>
-            <Link href="/projects" onClick={() => setIsOpen(false)}>
+            </button>
+            <button onClick={() => { handleScrollToSection("projects"); setIsOpen(false) }}>
               Projects
-            </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
+            </button>
+            <button onClick={() => { handleScrollToSection("contact"); setIsOpen(false) }}>
               Contact
-            </Link>
+            </button>
           </ul>
         </div>
       )}

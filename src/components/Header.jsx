@@ -21,7 +21,7 @@ const data = [
      },
      {
           id: 4,
-          image:"/images/plumbing-header.jpg",
+          image:"/images/ac2.jpg",
      },
      {
           id: 5,
@@ -36,7 +36,7 @@ export default function Header() {
   useEffect(() => {
     const interval = setInterval(
       () => setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1)),
-      1500 // 2.5 seconds for better readability
+      2500 // 2.5 seconds for better readability
     );
     return () => clearInterval(interval);
   }, []);
@@ -50,8 +50,8 @@ export default function Header() {
         <div className="flex flex-col items-end mt-10 gap-6 w-full max-w-xl">
           
           <div className="space-x-6 mt-8">
-            <Link href="/projects" className="border border-[#0b2341] px-5 py-1 md:px-8 md:py-3 rounded">Projects</Link>
-            <Link href="/contact" className="border border-[#0b2341] text-white px-5 py-1 md:px-8 md:py-3 rounded bg-[#0b2341]">Contact Us</Link>
+            <Link href="/projects" className="border border-[#0b2341] px-5 py-3 md:px-8 md:py-3 rounded">Projects</Link>
+            <Link href="/contact" className="border border-[#0b2341] text-white px-5 py-3 md:px-8 md:py-3 rounded bg-[#0b2341]">Contact Us</Link>
           </div>
         </div>
       </div>
