@@ -32,7 +32,7 @@ export default function Contact() {
 
   return (
     <div className=" py-20 px-6 md:px-10 lg:px-20 flex justify-center" id="contact">
-      <div className="w-full max-w-4xl bg-gradient-to-br from-[#f5f8fb] to-[#eaf0f6] shadow-xl rounded-xl p-8 md:p-12 border border-gray-100">
+      <div className="w-full max-w-5xl bg-gradient-to-br from-[#f5f8fb] to-[#eaf0f6] shadow-xl rounded-xl p-8 md:p-12 border border-gray-100">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center text-gray-800">
           Contact <span className='underline underline-offset-4 
       decoration-1  

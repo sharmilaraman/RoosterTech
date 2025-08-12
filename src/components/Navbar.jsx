@@ -6,7 +6,7 @@ import { X, Mail, Phone } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
   const router = useRouter();
   const handleScrollToSection = (id) => {
     if (pathname === "/") {
@@ -55,19 +55,28 @@ export default function Navbar() {
           >
             About
           </button>
-          <Link href="/services" className="cursor-pointer hover:text-gray-400">
+          <button
+            className="cursor-pointer hover:text-gray-400"
+            onClick={() => {
+              handleScrollToSection("services");
+            }}
+          >
             Services
-          </Link>
-          <button className="cursor-pointer hover:text-gray-400"
-           onClick={() => {
+          </button>
+          <button
+            className="cursor-pointer hover:text-gray-400"
+            onClick={() => {
               handleScrollToSection("projects");
-            }} >
+            }}
+          >
             Projects
           </button>
-          <button className="cursor-pointer hover:text-gray-400"
+          <button
+            className="cursor-pointer hover:text-gray-400"
             onClick={() => {
               handleScrollToSection("contact");
-            }}>
+            }}
+          >
             Contact
           </button>
         </ul>
@@ -75,7 +84,7 @@ export default function Navbar() {
         {/* CTA + Mobile Menu Button */}
         <div className="flex items-center gap-3">
           <a href="mailto:roostertechsa@gmail.com">
-            <button className="bg-gray-100 cursor-poiner rounded-full p-1 md:p-2">
+            <button className="bg-gray-100 cursor-pointer rounded-full p-1 md:p-2">
               <Mail className="text-orange-400 w-4 h-4 md:w-5 md:h-5" />
             </button>
           </a>
@@ -120,16 +129,28 @@ export default function Navbar() {
             >
               About
             </button>
-            <button  onClick={() => {
-                handleScrollToSection("servicess");
+            <button
+              onClick={() => {
+                handleScrollToSection("services");
                 setIsOpen(false);
-              }}>
+              }}
+            >
               Services
             </button>
-            <button onClick={() => { handleScrollToSection("projects"); setIsOpen(false) }}>
+            <button
+              onClick={() => {
+                handleScrollToSection("projects");
+                setIsOpen(false);
+              }}
+            >
               Projects
             </button>
-            <button onClick={() => { handleScrollToSection("contact"); setIsOpen(false) }}>
+            <button
+              onClick={() => {
+                handleScrollToSection("contact");
+                setIsOpen(false);
+              }}
+            >
               Contact
             </button>
           </ul>

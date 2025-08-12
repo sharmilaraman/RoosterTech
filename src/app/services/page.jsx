@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 const SERVICES = [
   {
     title: "Air-Conditioning Services",
@@ -45,6 +46,9 @@ const SERVICES = [
 export default function Services() {
    const pathname = usePathname(); 
   const router = useRouter();
+   const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
   const handleScrollToSection = (id) => {
     if (pathname === "/") {
       const section = document.getElementById(id);
@@ -55,7 +59,17 @@ export default function Services() {
       router.push(`/?scrollTo=${id}`);
     }
   };
+   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint in Tailwind is 640px
+    };
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
+   const displayedServices =
+    isMobile && !showAll ? SERVICES.slice(0, 3) : SERVICES;
   return (
     <div id="services" className="w-full overflow-hidden">
       <div className="container mx-auto px-6 md:px-10 lg:px-20 py-10">
@@ -69,7 +83,7 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {SERVICES.map((service) => (
+          {displayedServices.map((service) => (
             <div
               key={service.title}
               className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-orange-400 shadow-sm hover:shadow-lg transition-all duration-300"
@@ -112,6 +126,17 @@ export default function Services() {
             </div>
           ))}
         </div>
+     {isMobile && SERVICES.length > 3 && (
+  <div className="text-center mt-6">
+    <button
+      onClick={() => setShowAll(!showAll)}
+      className="px-6 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-600 transition-colors"
+    >
+      {showAll ? "View Less" : "View More"}
+    </button>
+  </div>
+)}
+
       </div>
     </div>
   );

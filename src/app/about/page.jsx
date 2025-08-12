@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="scroll-mt-28 flex flex-col items-center justify-center container mx-auto p-14 w-full overflow-hidden md:px-10 lg:px-32"
+      className="scroll-mt-28 flex flex-col items-center justify-center container mx-auto p-10 w-full overflow-hidden md:px-10 lg:px-32"
     >
       <h1 className="text-2xl sm:text-4xl text-center font-bold mt-2 mb-2">
         About{" "}
