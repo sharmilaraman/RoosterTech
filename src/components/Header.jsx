@@ -25,7 +25,7 @@ const data = [
   {
     id: 4,
     image: "/images/aircone.jpg",
-    title: "Comprehensive Electrical Services You Trust",
+    title: "Electrical Services You Trust",
     color: "text-[#0b2341]"
   },
 ];
