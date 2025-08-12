@@ -13,13 +13,13 @@ const data = [
   {
     id: 2,
     image: "/images/wiring3.jpg",
-    title: "Professional Wiring & Safe Rewiring Solutions",
+    title: "Wiring & Safe Rewiring Solutions",
     color: "text-white"
   },
   {
     id: 3,
     image: "/images/ac2.jpg",
-    title: "Efficient Air-Conditioning Installation & Care",
+    title: "Air-Conditioning Installation & Services ",
     color: "text-white"
   },
   {
