@@ -56,7 +56,7 @@ export default function Header() {
       style={{ backgroundImage: `url('${data[currentSlide].image}')` }}
     >
       <div className="container text-end mx-auto py-4 px-6 md:px-10 lg:px-20 flex flex-col items-end">
-        <h2 className="text-[#0b2341] uppercase text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl pt-20 font-semibold">
+        <h2 className="text-white uppercase text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl pt-20 font-semibold">
           Explore our services
         </h2>
         <div className="flex flex-col items-end mt-10 gap-6 w-full max-w-xl">
