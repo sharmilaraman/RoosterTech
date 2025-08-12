@@ -7,24 +7,29 @@ const data = [
   {
     id: 1,
     image: "/images/header2.jpg",
-    title: "Expert Servicing & Reliable Maintenance"
+    title: "Expert Servicing & Reliable Maintenance",
+    color: "text-[#0b2341]"
   },
   {
     id: 2,
     image: "/images/wiring3.jpg",
-    title: "Professional Wiring & Safe Rewiring Solutions"
+    title: "Professional Wiring & Safe Rewiring Solutions",
+    color: "text-white"
   },
   {
     id: 3,
     image: "/images/ac2.jpg",
-    title: "Efficient Air-Conditioning Installation & Care"
+    title: "Efficient Air-Conditioning Installation & Care",
+    color: "text-white"
   },
   {
     id: 4,
     image: "/images/aircone.jpg",
-    title: "Comprehensive Electrical Services You Trust"
+    title: "Comprehensive Electrical Services You Trust",
+    color: "text-[#0b2341]"
   },
 ];
+
 
 export default function Header() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,9 +61,12 @@ export default function Header() {
       style={{ backgroundImage: `url('${data[currentSlide].image}')` }}
     >
       <div className="container text-end mx-auto py-4 px-6 md:px-10 lg:px-20 flex flex-col items-end">
-        <h2 className="text-white uppercase text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl pt-20 font-semibold">
-          Explore our services
-        </h2>
+       <h2
+  className={`${data[currentSlide].color} uppercase text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl pt-20 font-semibold`}
+>
+  {data[currentSlide].title}
+</h2>
+
         <div className="flex flex-col items-end mt-10 gap-6 w-full max-w-xl">
           <div className="space-x-6 mt-8">
             <button
