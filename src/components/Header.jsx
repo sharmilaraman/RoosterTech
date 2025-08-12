@@ -71,7 +71,7 @@ export default function Header() {
           <div className="space-x-6 mt-8">
             <button
               onClick={() => handleScrollToSection("projects")}
-              className="border border-[#0b2341] px-5 py-3 md:px-8 md:py-3 rounded"
+              className={`${data[currentSlide].color}  border border-[#0b2341] px-5 py-3 md:px-8 md:py-3 rounded`}
             >
               Projects
             </button>
