@@ -11,14 +11,14 @@ export default function Footer() {
         <div className="w-full md:w-1/3 mb-8 md:mb-0">
           <Image src="/images/logo.png" alt="logo" width={70} height={70} />
           <p className="mt-4">
-            <span className="text-orange-400">Our success</span> is driven by
+            <span className="text-orange-400 underline underline-offset-4 decoration-1 under">Our success</span> is driven by
             our team of qualified engineers, technicians, and support staff. Our
             professionals are certified, safety-trained, and committed to
             quality workmanship and on-time delivery.
           </p>
         </div>
         <div className="w-full md:w-1/5 mb-8 md:mb-0">
-          <h3 className="text-2xl font-bold mb-4 text-orange-400">
+          <h3 className="text-2xl font-bold mb-4 text-orange-400 underline underline-offset-4 decoration-1 under">
             Our Services
           </h3>
           <ul className="flex flex-col gap-2">
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full md:w-1/3 ">
-          <h3 className="text-2xl font-bold mb-4 text-orange-400">
+          <h3 className="text-2xl font-bold mb-4 text-orange-400 underline underline-offset-4 decoration-1 under">
             Get In Touch
           </h3>
           <p className="mb-2">
