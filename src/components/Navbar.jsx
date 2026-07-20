@@ -5,13 +5,13 @@ import React, { useEffect, useState } from "react";
 import { X, Mail, Phone, ArrowUpRight } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
-const navItems = [
+const navItems = [ 
   { label: "Home", type: "link", href: "/" },
   { label: "About", type: "scroll", id: "about" },
   { label: "Services", type: "scroll", id: "services" },
   { label: "Projects", type: "scroll", id: "projects" },
   { label: "Contact", type: "scroll", id: "contact" },
-];
+];   
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
