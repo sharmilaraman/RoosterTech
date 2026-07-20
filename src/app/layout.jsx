@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     < link rel="icon" href="/images/roasterlogo.jpg" />
+     <link rel="icon" href="/images/roasterlogo.jpg" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > <Navbar />
