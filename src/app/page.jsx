@@ -9,7 +9,7 @@ import Mission from "../components/mission";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      <ToastContainer />
+      <ToastContainer /> 
       <Header />
       <About />
       <Services />
